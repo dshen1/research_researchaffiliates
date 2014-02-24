@@ -1,0 +1,206 @@
+<!doctype HTML>
+<meta charset = 'utf-8'>
+<html>
+  <head>
+    
+    <script src='http://d3js.org/d3.v3.min.js' type='text/javascript'></script>
+    <script src='http://dimplejs.org/dist/dimple.v1.1.4.min.js' type='text/javascript'></script>
+    
+    <style>
+    .rChart {
+      display: block;
+      margin-left: auto; 
+      margin-right: auto;
+      width: 800px;
+      height: 400px;
+    }  
+    </style>
+    
+  </head>
+  <body >
+    
+    <div id = 'chart1d74d473732' class = 'rChart dimple'></div>    
+    <script type="text/javascript">
+  var opts = {
+ "dom": "chart1d74d473732",
+"width":    800,
+"height":    400,
+"xAxis": {
+ "type": "addMeasureAxis",
+"showPercent": false,
+"outputFormat": ".1%" 
+},
+"yAxis": {
+ "type": "addCategoryAxis",
+"showPercent": false,
+"grouporderRule": "StrategyType" 
+},
+"zAxis": [],
+"colorAxis": [],
+"defaultColors": [],
+"layers": [],
+"legend": [],
+"x": "Value",
+"y": [ "Geography", "Strategy" ],
+"groups": "StrategyType",
+"type": "bar",
+"id": "chart1d74d473732" 
+},
+    data = [{"Geography":"Global","StrategyType":"CapWeight","Strategy":"Cap Weighted","Statistic":"Return","Value":0.0715},{"Geography":"Global","StrategyType":"EqualWeight","Strategy":"Equal Weight","Statistic":"Return","Value":0.0836},{"Geography":"Global","StrategyType":"HighRisk=HighReward","Strategy":"Volatility Weighted","Statistic":"Return","Value":0.0786},{"Geography":"Global","StrategyType":"HighRisk=HighReward","Strategy":"Market Beta Weighted","Statistic":"Return","Value":0.0658},{"Geography":"Global","StrategyType":"HighRisk=HighReward","Strategy":"Downside Semi-Deviation Weighted","Statistic":"Return","Value":0.0829},{"Geography":"Global","StrategyType":"HighRisk=HighReward","Strategy":"Inverse-Ratio of Volatility Weighted","Statistic":"Return","Value":0.0932},{"Geography":"Global","StrategyType":"HighRisk=HighReward","Strategy":"Inverse-Complement of Volatility Weighted","Statistic":"Return","Value":0.0899},{"Geography":"Global","StrategyType":"HighRisk=HighReward","Strategy":"Inverse-Ratio of Market Beta Weighted","Statistic":"Return","Value":0.0944},{"Geography":"Global","StrategyType":"HighRisk=HighReward","Strategy":"Inverse-Complement of Market Beta Weighted","Statistic":"Return","Value":0.0931},{"Geography":"Global","StrategyType":"HighRisk=HighReward","Strategy":"Inverse-Ratio of Downside Semi-Deviation Weighted","Statistic":"Return","Value":0.0911},{"Geography":"Global","StrategyType":"HighRisk=HighReward","Strategy":"Inverse-Complement of Downside Semi-Deviation Weighted","Statistic":"Return","Value":0.0883},{"Geography":"Global","StrategyType":"Optimization-Based","Strategy":"Minimum Variance","Statistic":"Return","Value":0.084},{"Geography":"Global","StrategyType":"Optimization-Based","Strategy":"Max\ueb75m Diversification","Statistic":"Return","Value":0.0714},{"Geography":"Global","StrategyType":"Optimization-Based","Strategy":"Risk-Efficient (A=2)","Statistic":"Return","Value":0.09},{"Geography":"Global","StrategyType":"Optimization-Based","Strategy":"Risk Cluster Equal Weight","Statistic":"Return","Value":0.0948},{"Geography":"Global","StrategyType":"Optimization-Based","Strategy":"Inverse-Ratio of Minimum Variance","Statistic":"Return","Value":0.087},{"Geography":"Global","StrategyType":"Optimization-Based","Strategy":"Inverse-Complement of Minimum Variance","Statistic":"Return","Value":0.0877},{"Geography":"Global","StrategyType":"Optimization-Based","Strategy":"Inverse-Ratio of Maximum Diversification","Statistic":"Return","Value":0.089},{"Geography":"Global","StrategyType":"Optimization-Based","Strategy":"Inverse-Complement of Maximum Diversification","Statistic":"Return","Value":0.088},{"Geography":"Global","StrategyType":"Optimization-Based","Strategy":"Inverse-Ratio of Risk-Efficient (=2)","Statistic":"Return","Value":0.0855},{"Geography":"Global","StrategyType":"Optimization-Based","Strategy":"Inverse-Complement of Risk-Efficient (\u00bd2)","Statistic":"Return","Value":0.0851},{"Geography":"Global","StrategyType":"Optimization-Based","Strategy":"Inverse-Ratio of RCEW","Statistic":"Return","Value":0.0944},{"Geography":"Global","StrategyType":"Optimization-Based","Strategy":"Inverse-Complement of RCEW","Statistic":"Return","Value":0.0874},{"Geography":"Global","StrategyType":"Fundamentals-Based","Strategy":"Book Value Weighted","Statistic":"Return","Value":0.095},{"Geography":"Global","StrategyType":"Fundamentals-Based","Strategy":"5yr avg Earnings Weighted","Statistic":"Return","Value":0.112},{"Geography":"Global","StrategyType":"Fundamentals-Based","Strategy":"Fundamental Weighted","Statistic":"Return","Value":0.11},{"Geography":"Global","StrategyType":"Fundamentals-Based","Strategy":"Earnings Growth Weighted","Statistic":"Return","Value":0.0883},{"Geography":"Global","StrategyType":"Fundamentals-Based","Strategy":"Inverse-Ratio of Book Value Weighted","Statistic":"Return","Value":0.106},{"Geography":"Global","StrategyType":"Fundamentals-Based","Strategy":"Inverse-Complement of Book Value Weighted","Statistic":"Return","Value":0.1051},{"Geography":"Global","StrategyType":"Fundamentals-Based","Strategy":"Inverse-Ratio of 5yr avg Earnings Weighted","Statistic":"Return","Value":0.1245},{"Geography":"Global","StrategyType":"Fundamentals-Based","Strategy":"Inverse-Complement of 5yr avg Earnings Weighted","Statistic":"Return","Value":0.124},{"Geography":"Global","StrategyType":"Fundamentals-Based","Strategy":"Inverse-Ratio of Fundamental Weighted","Statistic":"Return","Value":0.1253},{"Geography":"Global","StrategyType":"Fundamentals-Based","Strategy":"Inverse-Complement of Fundamental Weighted","Statistic":"Return","Value":0.1232},{"Geography":"Global","StrategyType":"Fundamentals-Based","Strategy":"Inverse-Ratio of Earnings Growth Weighted","Statistic":"Return","Value":0.066},{"Geography":"Global","StrategyType":"Fundamentals-Based","Strategy":"Inverse-Complement of Earnings Growth Weighted","Statistic":"Return","Value":0.0836},{"Geography":"Global","StrategyType":"Averages","Strategy":"Average of 100 Malkiel's Monkey Portfolios","Statistic":"Return","Value":0.0812},{"Geography":"Global","StrategyType":"Averages","Strategy":"Average for Non-Cap-Weight Strategies, excl. Inverses","Statistic":"Return","Value":0.0875},{"Geography":"Global","StrategyType":"Averages","Strategy":"Average for All Inverse-Ratio Strategies","Statistic":"Return","Value":0.096},{"Geography":"Global","StrategyType":"Averages","Strategy":"Average for Ail Inverse-Complement Strategies","Statistic":"Return","Value":0.096},{"Geography":"US","StrategyType":"CapWeight","Strategy":"Cap Weighted","Statistic":"Return","Value":0.0966},{"Geography":"US","StrategyType":"EqualWeight","Strategy":"Equal Weight","Statistic":"Return","Value":0.1146},{"Geography":"US","StrategyType":"HighRisk=HighReward","Strategy":"Volatility Weighted","Statistic":"Return","Value":0.1215},{"Geography":"US","StrategyType":"HighRisk=HighReward","Strategy":"Market Beta Weighted","Statistic":"Return","Value":0.1189},{"Geography":"US","StrategyType":"HighRisk=HighReward","Strategy":"Downside Semi-Deviation Weighted","Statistic":"Return","Value":0.1213},{"Geography":"US","StrategyType":"HighRisk=HighReward","Strategy":"Inverse-Ratio of Volatility Weighted","Statistic":"Return","Value":0.1253},{"Geography":"US","StrategyType":"HighRisk=HighReward","Strategy":"Inverse-Complement of Volatility Weighted","Statistic":"Return","Value":0.1259},{"Geography":"US","StrategyType":"HighRisk=HighReward","Strategy":"Inverse-Ratio of Market Beta Weighted","Statistic":"Return","Value":0.1348},{"Geography":"US","StrategyType":"HighRisk=HighReward","Strategy":"Inverse-Complement of Market Beta Weighted","Statistic":"Return","Value":0.1263},{"Geography":"US","StrategyType":"HighRisk=HighReward","Strategy":"Inverse-Ratio of Downside Semi-Deviation Weighted","Statistic":"Return","Value":0.1245},{"Geography":"US","StrategyType":"HighRisk=HighReward","Strategy":"Inverse-Complement of Downside Semi-Deviation Weighted","Statistic":"Return","Value":0.1251},{"Geography":"US","StrategyType":"Optimization-Based","Strategy":"Minimum Variance","Statistic":"Return","Value":0.1175},{"Geography":"US","StrategyType":"Optimization-Based","Strategy":"Max\ueb75m Diversification","Statistic":"Return","Value":0.1199},{"Geography":"US","StrategyType":"Optimization-Based","Strategy":"Risk-Efficient (A=2)","Statistic":"Return","Value":0.125},{"Geography":"US","StrategyType":"Optimization-Based","Strategy":"Risk Cluster Equal Weight","Statistic":"Return","Value":0.1118},{"Geography":"US","StrategyType":"Optimization-Based","Strategy":"Inverse-Ratio of Minimum Variance","Statistic":"Return","Value":0.1266},{"Geography":"US","StrategyType":"Optimization-Based","Strategy":"Inverse-Complement of Minimum Variance","Statistic":"Return","Value":0.1251},{"Geography":"US","StrategyType":"Optimization-Based","Strategy":"Inverse-Ratio of Maximum Diversification","Statistic":"Return","Value":0.1248},{"Geography":"US","StrategyType":"Optimization-Based","Strategy":"Inverse-Complement of Maximum Diversification","Statistic":"Return","Value":0.1237},{"Geography":"US","StrategyType":"Optimization-Based","Strategy":"Inverse-Ratio of Risk-Efficient (=2)","Statistic":"Return","Value":0.1235},{"Geography":"US","StrategyType":"Optimization-Based","Strategy":"Inverse-Complement of Risk-Efficient (\u00bd2)","Statistic":"Return","Value":0.1234},{"Geography":"US","StrategyType":"Optimization-Based","Strategy":"Inverse-Ratio of RCEW","Statistic":"Return","Value":0.1323},{"Geography":"US","StrategyType":"Optimization-Based","Strategy":"Inverse-Complement of RCEW","Statistic":"Return","Value":0.1243},{"Geography":"US","StrategyType":"Fundamentals-Based","Strategy":"Book Value Weighted","Statistic":"Return","Value":0.1123},{"Geography":"US","StrategyType":"Fundamentals-Based","Strategy":"5yr avg Earnings Weighted","Statistic":"Return","Value":0.1118},{"Geography":"US","StrategyType":"Fundamentals-Based","Strategy":"Fundamental Weighted","Statistic":"Return","Value":0.116},{"Geography":"US","StrategyType":"Fundamentals-Based","Strategy":"Earnings Growth Weighted","Statistic":"Return","Value":0.1242},{"Geography":"US","StrategyType":"Fundamentals-Based","Strategy":"Inverse-Ratio of Book Value Weighted","Statistic":"Return","Value":0.1386},{"Geography":"US","StrategyType":"Fundamentals-Based","Strategy":"Inverse-Complement of Book Value Weighted","Statistic":"Return","Value":0.1304},{"Geography":"US","StrategyType":"Fundamentals-Based","Strategy":"Inverse-Ratio of 5yr avg Earnings Weighted","Statistic":"Return","Value":0.1438},{"Geography":"US","StrategyType":"Fundamentals-Based","Strategy":"Inverse-Complement of 5yr avg Earnings Weighted","Statistic":"Return","Value":0.1316},{"Geography":"US","StrategyType":"Fundamentals-Based","Strategy":"Inverse-Ratio of Fundamental Weighted","Statistic":"Return","Value":0.1406},{"Geography":"US","StrategyType":"Fundamentals-Based","Strategy":"Inverse-Complement of Fundamental Weighted","Statistic":"Return","Value":0.1334},{"Geography":"US","StrategyType":"Fundamentals-Based","Strategy":"Inverse-Ratio of Earnings Growth Weighted","Statistic":"Return","Value":0.1026},{"Geography":"US","StrategyType":"Fundamentals-Based","Strategy":"Inverse-Complement of Earnings Growth Weighted","Statistic":"Return","Value":0.1137},{"Geography":"US","StrategyType":"Averages","Strategy":"Average of 100 Malkiel's Monkey Portfolios","Statistic":"Return","Value":0.1126},{"Geography":"US","StrategyType":"Averages","Strategy":"Average for Non-Cap-Weight Strategies, excl. Inverses","Statistic":"Return","Value":0.1175},{"Geography":"US","StrategyType":"Averages","Strategy":"Average for All Inverse-Ratio Strategies","Statistic":"Return","Value":0.1288},{"Geography":"US","StrategyType":"Averages","Strategy":"Average for Ail Inverse-Complement Strategies","Statistic":"Return","Value":0.1257}];
+  var svg = dimple.newSvg("#" + opts.id, opts.width, opts.height);
+
+  var myChart = new dimple.chart(svg, data);
+  if (opts.bounds) {
+    myChart.setBounds(opts.bounds.x, opts.bounds.y, opts.bounds.width, opts.bounds.height);//myChart.setBounds(80, 30, 480, 330);
+  }
+  //dimple allows use of custom CSS with noFormats
+  if(opts.noFormats) { myChart.noFormats = opts.noFormats; };
+  //for markimekko and addAxis also have third parameter measure
+  //so need to evaluate if measure provided
+  
+  //function to build axes
+  function buildAxis(position,layer){
+    var axis;
+    var axisopts;
+    if (!layer[position+"Axis"]){
+      axisopts = opts[position+"Axis"];
+    } else axisopts = layer[position+"Axis"];
+    
+    if(axisopts.measure) {
+      axis = myChart[axisopts.type](position,layer[position],axisopts.measure);
+    } else {
+      axis = myChart[axisopts.type](position, layer[position]);
+    };
+    if(!(axisopts.type === "addPctAxis")) axis.showPercent = axisopts.showPercent;
+    if (axisopts.orderRule) axis.addOrderRule(axisopts.orderRule);
+    if (axisopts.grouporderRule) axis.addGroupOrderRule(axisopts.grouporderRule);  
+    if (axisopts.overrideMin) axis.overrideMin = axisopts.overrideMin;
+    if (axisopts.overrideMax) axis.overrideMax = axisopts.overrideMax;
+    if (axisopts.inputFormat) axis.dateParseFormat = axisopts.inputFormat;
+    if (axisopts.outputFormat) axis.tickFormat = axisopts.outputFormat;    
+    return axis;
+  };
+  
+  var c = null;
+  if(d3.keys(opts.colorAxis).length > 0) {
+    c = myChart[opts.colorAxis.type](opts.colorAxis.colorSeries,opts.colorAxis.palette) ;
+  }
+  
+  //allow manipulation of default colors to use with dimple
+  if(opts.defaultColors.length) {
+    opts.defaultColors = opts.defaultColors[0];
+    if (typeof(opts.defaultColors) == "function") {
+      //assume this is a d3 scale
+      //for now loop through first 20 but need a better way to handle
+      defaultColorsArray = [];
+      for (var n=0;n<20;n++) {
+        defaultColorsArray.push(opts.defaultColors(n));
+      };
+      opts.defaultColors = defaultColorsArray;
+    }
+    opts.defaultColors.forEach(function(d,i) {
+      opts.defaultColors[i] = new dimple.color(d);
+    })
+    myChart.defaultColors = opts.defaultColors;
+  }  
+  
+  //do series
+  //set up a function since same for each
+  //as of now we have x,y,groups,data,type in opts for primary layer
+  //and other layers reside in opts.layers
+  function buildSeries(layer, hidden){
+    //inherit from primary layer if not intentionally changed or xAxis, yAxis, zAxis null
+    if (!layer.xAxis) layer.xAxis = opts.xAxis;    
+    if (!layer.yAxis) layer.yAxis = opts.yAxis;
+    if (!layer.zAxis) layer.zAxis = opts.zAxis;
+    
+    var x = buildAxis("x", layer);
+    x.hidden = hidden;
+    
+    var y = buildAxis("y", layer);
+    y.hidden = hidden;
+    
+    //z for bubbles
+    var z = null;
+    if (!(typeof(layer.zAxis) === 'undefined') && layer.zAxis.type){
+      z = buildAxis("z", layer);
+    };
+    
+    //here think I need to evaluate group and if missing do null
+    //as the group argument
+    //if provided need to use groups from layer
+    var s = new dimple.series(myChart, null, x, y, z, c, dimple.plot[layer.type], dimple.aggregateMethod.avg, dimple.plot[layer.type].stacked);
+    
+    //as of v1.1.4 dimple can use different dataset for each series
+    if(layer.data){
+      //convert to an array of objects
+      //avoid lodash for now
+      datakeys = d3.keys(layer.data)
+      layer.dataarray = layer.data[datakeys[1]].map(function(d,i){
+        var tempobj = {}
+        datakeys.forEach(function(key){
+          tempobj[key] = layer.data[key][i]
+        })
+        return tempobj
+      })
+      s.data = layer.dataarray;
+    }
+    
+    if(layer.hasOwnProperty("groups")) {
+      s.categoryFields = (typeof layer.groups === "object") ? layer.groups : [layer.groups];
+      //series offers an aggregate method that we will also need to check if available
+      //options available are avg, count, max, min, sum
+      if (!(typeof(layer.aggregate) === 'undefined')) {
+        s.aggregate = eval(layer.aggregate);
+      }
+      if (!(typeof(layer.lineWeight) === 'undefined')) {
+        s.lineWeight = eval(layer.lineWeight);
+      }
+      if (!(typeof(layer.barGap) === 'undefined')) {
+        s.barGap = eval(layer.barGap);
+      }    
+    };
+    myChart.series.push(s);
+    
+    /*placeholder fix domain of primary scale for new series data
+    //not working right now but something like this
+    //for now just use overrideMin and overrideMax from rCharts
+    for( var i = 0; i<2; i++) {
+      if (!myChart.axes[i].overrideMin) {
+        myChart.series[0]._axisBounds(i==0?"x":"y").min = myChart.series[0]._axisBounds(i==0?"x":"y").min < s._axisBounds(i==0?"x":"y").min ? myChart.series[0]._axisBounds(i==0?"x":"y").min : s._axisBounds(i==0?"x":"y").min;
+      }
+      if (!myChart.axes[i].overrideMax) {  
+        myChart.series[0]._axisBounds(i==0?"x":"y")._max = myChart.series[0]._axisBounds(i==0?"x":"y").max > s._axisBounds(i==0?"x":"y").max ? myChart.series[0]._axisBounds(i==0?"x":"y").max : s._axisBounds(i==0?"x":"y").max;
+      }
+      myChart.axes[i]._update();
+    }
+    */
+      
+    
+    return s;
+  };
+  
+  buildSeries(opts, false);
+  if (opts.layers.length > 0) {
+    opts.layers.forEach(function(layer){
+      buildSeries(layer, true);
+    })
+  }
+  //unsure if this is best but if legend is provided (not empty) then evaluate
+  if(d3.keys(opts.legend).length > 0) {
+    var l =myChart.addLegend();
+    d3.keys(opts.legend).forEach(function(d){
+      l[d] = opts.legend[d];
+    });
+  }
+  //quick way to get this going but need to make this cleaner
+  if(opts.storyboard) {
+    myChart.setStoryboard(opts.storyboard);
+  };
+  myChart.draw();
+
+</script>
+    
+    <script></script>    
+  </body>
+</html>

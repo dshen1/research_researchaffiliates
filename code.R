@@ -7,6 +7,7 @@
 
 require(reshape2)
 require(ggplot2)
+require(lattice)
 require(rCharts)
 
 #read in the csv version of data
@@ -66,3 +67,18 @@ dBar$yAxis(
   grouporderRule = "StrategyType"
 )
 dBar
+
+#rebalStats.melt$StrategyType = factor(rebalStats.melt$StrategyType)
+
+gBar <- ggplot(data = rebalStats.melt, aes(x=Strategy,y=Value)) +
+  geom_bar(stat="identity", aes(fill=StrategyType)) +
+  facet_grid( Statistic ~ Geography, scales = "free_y" )
+
+rebalStats.melt$Strategy <- factor(rebalStats.melt$Strategy)
+rebalStats.melt$Strategy <- reorder(rebalStats.melt$Strategy,factor(rebalStats.melt$StrategyType))
+
+lBar <- dotplot(
+  Strategy ~ Value | Statistic,
+  groups = Geography,
+  data = rebalStats.melt
+)
